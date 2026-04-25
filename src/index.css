@@ -1,0 +1,285 @@
+/* =====================================================================
+   KAONA MASONRY INC — Iron Edge × Iron-Brass
+   Style: industrial | Palette: iron-brass
+   Deep steel navy + bone + brass accent. Zero radius. Oswald display.
+===================================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Core surfaces */
+  --background: 220 45% 7%;
+  --foreground: 40 30% 92%;
+  --card: 220 40% 10%;
+  --card-foreground: 40 30% 92%;
+  --popover: 220 40% 10%;
+  --popover-foreground: 40 30% 92%;
+
+  /* Brass accent */
+  --primary: 38 85% 55%;
+  --primary-foreground: 220 45% 7%;
+  --secondary: 220 35% 14%;
+  --secondary-foreground: 40 30% 92%;
+  --muted: 220 35% 14%;
+  --muted-foreground: 40 15% 65%;
+  --accent: 38 85% 55%;
+  --accent-foreground: 220 45% 7%;
+  --destructive: 0 70% 55%;
+  --destructive-foreground: 40 30% 92%;
+  --border: 220 30% 20%;
+  --input: 220 30% 20%;
+  --ring: 38 85% 55%;
+
+  /* Extended palette */
+  --steel-deep: 220 45% 7%;
+  --steel-mid: 220 40% 10%;
+  --steel-light: 220 35% 14%;
+  --brass: 38 85% 55%;
+  --brass-dim: 38 60% 40%;
+  --rust: 15 70% 50%;
+  --concrete: 40 8% 75%;
+
+  /* Zero radius — hard edge by design */
+  --radius: 0rem;
+
+  /* Hard-edge shadows */
+  --shadow-offset-sm: 3px 3px 0 0 hsl(var(--foreground));
+  --shadow-offset-md: 6px 6px 0 0 hsl(var(--accent));
+  --shadow-offset-lg: 10px 10px 0 0 hsl(var(--accent));
+
+  /* Fluid type scale */
+  --text-display-hero: clamp(2.75rem, 1rem + 7vw, 6.5rem);
+  --text-display-section: clamp(2rem, 1rem + 4vw, 4rem);
+  --text-display-lg: clamp(1.75rem, 1rem + 3vw, 3rem);
+  --text-display-md: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+
+  /* Motion */
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base */
+* {
+  border-radius: 0 !important;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Archivo', system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display type */
+.iron-display {
+  font-family: 'Oswald', 'Impact', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.88;
+  color: hsl(var(--foreground));
+}
+
+/* Section kicker label */
+.iron-label {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  color: hsl(var(--accent));
+}
+
+/* Dividers */
+.iron-rule {
+  height: 1px;
+  background-color: hsl(var(--border));
+  border: 0;
+}
+
+.iron-rule--brass {
+  height: 2px;
+  background-color: hsl(var(--accent));
+  border: 0;
+}
+
+/* Primary button */
+.iron-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.95rem 1.75rem;
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.iron-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-offset-sm);
+}
+
+.iron-btn--ghost {
+  background-color: transparent;
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.iron-btn--ghost:hover {
+  border-color: hsl(var(--accent));
+  color: hsl(var(--accent));
+  box-shadow: none;
+  transform: translate(-2px, -2px);
+}
+
+/* Card */
+.iron-card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  padding: 2rem;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.iron-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-offset-md);
+}
+
+/* Stat block (brass left rail) */
+.iron-stat {
+  border-left: 2px solid hsl(var(--accent));
+  padding-left: 1.25rem;
+}
+
+/* Photo frame */
+.iron-photo {
+  position: relative;
+  overflow: hidden;
+  background-color: hsl(var(--steel-mid));
+}
+
+.iron-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    hsl(var(--steel-deep) / 0.7) 100%
+  );
+  pointer-events: none;
+}
+
+/* Brass top-accent card (process steps) */
+.iron-card--brass-top {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-top: 3px solid hsl(var(--accent));
+  padding: 2rem;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.iron-card--brass-top:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-offset-md);
+}
+
+/* Service card with brass left-border reveal on hover */
+.iron-service-card {
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-left: 3px solid transparent;
+  padding: 1.75rem 2rem;
+  transition:
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out),
+    border-left-color var(--duration-fast) var(--ease-out);
+}
+
+.iron-service-card:hover {
+  border-left-color: hsl(var(--accent));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px hsl(220 45% 4% / 0.5);
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.animate-fade-up-delay-1 {
+  animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+.animate-fade-up-delay-2 {
+  animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+.animate-fade-up-delay-3 {
+  animation: fadeUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.3s both;
+}
+
+/* Ken Burns zoom on hero */
+@keyframes kenBurns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.06); }
+}
+
+.ken-burns {
+  animation: kenBurns 12s ease-in-out alternate infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .iron-card:hover,
+  .iron-card--brass-top:hover,
+  .iron-service-card:hover,
+  .iron-btn:hover,
+  .iron-btn--ghost:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .ken-burns {
+    animation: none;
+  }
+}
