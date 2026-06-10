@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 import { Phone, ArrowRight } from 'lucide-react'
 
-const HEADER_PHOTO = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1400&q=80&fit=crop&auto=format'
-const CTA_PHOTO    = 'https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1400&q=80&fit=crop&auto=format'
+const HEADER_PHOTO = 'https://images.unsplash.com/photo-1608947273783-c5d1ff5771ca?w=1400&q=80&fit=crop&auto=format'
+const CTA_PHOTO    = 'https://images.unsplash.com/photo-1586417753090-9058c92b350d?w=1400&q=80&fit=crop&auto=format'
 
 const SERVICES = [
   {
     name: 'Concrete Foundations',
-    photo: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&fit=crop&auto=format',
+    photo: 'https://images.unsplash.com/photo-1690541828600-a50a853a4a25?w=700&q=80&fit=crop&auto=format',
     ideal: 'Homeowners, GCs, commercial developers',
     detail: [
       'Stem walls, grade beams, and slab-on-grade foundations.',
@@ -18,7 +18,7 @@ const SERVICES = [
   },
   {
     name: 'Driveways & Parking Areas',
-    photo: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80&fit=crop&auto=format',
+    photo: 'https://images.unsplash.com/photo-1512207736890-6ffed8a84e8d?w=700&q=80&fit=crop&auto=format',
     ideal: 'Homeowners, HOAs, commercial property',
     detail: [
       'Residential and commercial driveways, turnarounds, and parking areas.',
@@ -29,7 +29,7 @@ const SERVICES = [
   },
   {
     name: 'Retaining Walls',
-    photo: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&q=80&fit=crop&auto=format',
+    photo: 'https://images.unsplash.com/photo-1608947273783-c5d1ff5771ca?w=700&q=80&fit=crop&auto=format',
     ideal: 'Hillside and agricultural properties',
     detail: [
       'Concrete and CMU masonry retaining walls.',
@@ -40,7 +40,7 @@ const SERVICES = [
   },
   {
     name: 'Decorative Concrete',
-    photo: 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=700&q=80&fit=crop&auto=format',
+    photo: 'https://images.unsplash.com/photo-1740660766677-f68d257db8b0?w=700&q=80&fit=crop&auto=format',
     ideal: 'Residential patios, pool decks, commercial lobbies',
     detail: [
       'Stamped concrete in stone, brick, and custom patterns.',
@@ -51,7 +51,7 @@ const SERVICES = [
   },
   {
     name: 'Concrete Slabs',
-    photo: 'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=700&q=80&fit=crop&auto=format',
+    photo: 'https://images.unsplash.com/photo-1659618129784-9355ebb8ecf5?w=700&q=80&fit=crop&auto=format',
     ideal: 'Residential additions, commercial builds, agricultural',
     detail: [
       '3,500 PSI minimum mix, standard.',
@@ -62,7 +62,7 @@ const SERVICES = [
   },
   {
     name: 'Masonry Work',
-    photo: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=700&q=80&fit=crop&auto=format',
+    photo: 'https://images.unsplash.com/photo-1597380746649-18baa8112556?w=700&q=80&fit=crop&auto=format',
     ideal: 'Commercial, agricultural, institutional',
     detail: [
       'Concrete masonry unit (CMU) block wall construction.',
@@ -73,7 +73,7 @@ const SERVICES = [
   },
   {
     name: 'Concrete Repair & Resurfacing',
-    photo: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80&fit=crop&auto=format',
+    photo: 'https://images.unsplash.com/photo-1664462516775-95f0b70c96da?w=700&q=80&fit=crop&auto=format',
     ideal: 'Aging residential and commercial concrete',
     detail: [
       'Spall and crack repair for Maui salt air deterioration.',
@@ -100,25 +100,25 @@ export default function Services() {
         />
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15,20,40,0.75)' }} />
         <div className="absolute inset-0 flex flex-col justify-end px-6 pb-10 max-w-7xl mx-auto z-10">
-          <div className="iron-label mb-2" style={{ color: 'hsl(38,85%,55%)' }}>§ What We Do</div>
+          <div className="iron-label mb-2" style={{ color: 'hsl(var(--accent))' }}>What We Do</div>
           <h1
             className="iron-display"
-            style={{ fontSize: 'clamp(2.5rem, 1rem + 5vw, 5rem)', color: 'hsl(40,30%,92%)' }}
+            style={{ fontSize: 'clamp(2.5rem, 1rem + 5vw, 5rem)', color: 'hsl(var(--foreground))' }}
           >
             SERVICES
           </h1>
         </div>
       </section>
 
-      {/* Services — alternating article layout */}
-      <section className="py-20" style={{ backgroundColor: 'hsl(220,45%,7%)' }}>
+      {/* Services, alternating article layout */}
+      <section className="py-20" style={{ backgroundColor: 'hsl(var(--background))' }}>
         <div className="max-w-7xl mx-auto px-6 flex flex-col gap-20">
           {SERVICES.map((svc, i) => (
             <article
               key={svc.name}
               className="grid md:grid-cols-2 gap-12 items-center"
             >
-              {/* Photo — alternates left/right */}
+              {/* Photo, alternates left/right */}
               <div className={`${i % 2 === 1 ? 'md:order-2' : ''}`}>
                 <img
                   src={svc.photo}
@@ -135,7 +135,7 @@ export default function Services() {
               <div className={`${i % 2 === 1 ? 'md:order-1' : ''}`}>
                 <div
                   className="iron-label mb-2"
-                  style={{ color: 'hsl(38,85%,55%)' }}
+                  style={{ color: 'hsl(var(--accent))' }}
                 >
                   Ideal for: {svc.ideal}
                 </div>
@@ -143,7 +143,7 @@ export default function Services() {
                   className="iron-display mb-6"
                   style={{
                     fontSize: 'clamp(1.75rem, 1rem + 2.5vw, 2.75rem)',
-                    color: 'hsl(40,30%,92%)',
+                    color: 'hsl(var(--foreground))',
                   }}
                 >
                   {svc.name.toUpperCase()}
@@ -153,11 +153,11 @@ export default function Services() {
                     <li
                       key={point}
                       className="flex items-start gap-3 font-sans text-sm leading-relaxed"
-                      style={{ color: 'hsl(40,15%,70%)' }}
+                      style={{ color: 'hsl(var(--muted-foreground))' }}
                     >
                       <span
                         className="mt-1.5 w-1.5 h-1.5 shrink-0"
-                        style={{ backgroundColor: 'hsl(38,85%,55%)' }}
+                        style={{ backgroundColor: 'hsl(var(--accent))' }}
                       />
                       {point}
                     </li>
@@ -190,12 +190,12 @@ export default function Services() {
             className="iron-display mb-6"
             style={{
               fontSize: 'clamp(2rem, 1rem + 3vw, 3rem)',
-              color: 'hsl(40,30%,92%)',
+              color: 'hsl(var(--foreground))',
             }}
           >
             NOT SURE WHICH SERVICE?
             <br />
-            <span style={{ color: 'hsl(38,85%,55%)' }}>CALL AND DESCRIBE THE JOB.</span>
+            <span style={{ color: 'hsl(var(--accent))' }}>CALL AND DESCRIBE THE JOB.</span>
           </h2>
           <div className="flex flex-wrap gap-4 justify-center">
             <a href="tel:+18085721466" className="iron-btn">
@@ -205,7 +205,7 @@ export default function Services() {
             <Link
               to="/contact"
               className="iron-btn iron-btn--ghost"
-              style={{ color: 'hsl(40,30%,92%)', borderColor: 'rgba(240,235,220,0.4)' }}
+              style={{ color: 'hsl(var(--foreground))', borderColor: 'rgba(240,235,220,0.4)' }}
             >
               Send a Message
               <ArrowRight size={14} />

@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { Phone, ArrowRight, CheckCircle } from 'lucide-react'
 
-const HEADER_PHOTO = 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=1400&q=80&fit=crop&auto=format'
-const ABOUT_PHOTO  = 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=900&q=80&fit=crop&auto=format'
-const CTA_PHOTO    = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80&fit=crop&auto=format'
+const HEADER_PHOTO = 'https://images.unsplash.com/photo-1597380746649-18baa8112556?w=1400&q=80&fit=crop&auto=format'
+const ABOUT_PHOTO  = 'https://images.unsplash.com/photo-1740660766677-f68d257db8b0?w=900&q=80&fit=crop&auto=format'
+const CTA_PHOTO    = 'https://images.unsplash.com/photo-1690541828600-a50a853a4a25?w=1400&q=80&fit=crop&auto=format'
 
 const CREDENTIALS = [
   'Hawaii Licensed Contractor',
@@ -29,10 +29,10 @@ export default function About() {
         />
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(15,20,40,0.75)' }} />
         <div className="absolute inset-0 flex flex-col justify-end px-6 pb-10 max-w-7xl mx-auto z-10">
-          <div className="iron-label mb-2" style={{ color: 'hsl(38,85%,55%)' }}>§ Who We Are</div>
+          <div className="iron-label mb-2" style={{ color: 'hsl(var(--accent))' }}>Who We Are</div>
           <h1
             className="iron-display"
-            style={{ fontSize: 'clamp(2.5rem, 1rem + 5vw, 5rem)', color: 'hsl(40,30%,92%)' }}
+            style={{ fontSize: 'clamp(2.5rem, 1rem + 5vw, 5rem)', color: 'hsl(var(--foreground))' }}
           >
             ABOUT KAONA MASONRY
           </h1>
@@ -40,20 +40,20 @@ export default function About() {
       </section>
 
       {/* Main story */}
-      <section className="py-20" style={{ backgroundColor: 'hsl(220,45%,7%)' }}>
+      <section className="py-20" style={{ backgroundColor: 'hsl(var(--background))' }}>
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
           <div>
             <h2
               className="iron-display mb-6"
-              style={{ fontSize: 'clamp(1.75rem, 1rem + 3vw, 3rem)', color: 'hsl(40,30%,92%)' }}
+              style={{ fontSize: 'clamp(1.75rem, 1rem + 3vw, 3rem)', color: 'hsl(var(--foreground))' }}
             >
               POURING MAUI CONCRETE
               <br />
-              <span style={{ color: 'hsl(38,85%,55%)' }}>SINCE 2009.</span>
+              <span style={{ color: 'hsl(var(--accent))' }}>SINCE 2009.</span>
             </h2>
             <div
               className="flex flex-col gap-5 font-body leading-relaxed"
-              style={{ color: 'hsl(40,15%,70%)' }}
+              style={{ color: 'hsl(var(--muted-foreground))' }}
             >
               <p>
                 Kaona Masonry started in Makawao with one truck and residential
@@ -62,7 +62,7 @@ export default function About() {
                 pour and a problem pour.
               </p>
               <p>
-                Seventeen years later, the setup is the same. Small crew. Owner
+                Sixteen years later, the setup is the same. Small crew. Owner
                 on site during pours. Written scope on every job, not a verbal
                 handshake and a hope.
               </p>
@@ -85,7 +85,7 @@ export default function About() {
           <div>
             <img
               src={ABOUT_PHOTO}
-              alt="Decorative concrete and masonry work — stamped concrete finish"
+              alt="Decorative concrete and masonry work, stamped concrete finish"
               className="w-full object-cover mb-8"
               style={{ aspectRatio: '4/3' }}
               loading="lazy"
@@ -101,9 +101,9 @@ export default function About() {
                   <CheckCircle
                     size={15}
                     className="mt-0.5 shrink-0"
-                    style={{ color: 'hsl(38,85%,55%)' }}
+                    style={{ color: 'hsl(var(--accent))' }}
                   />
-                  <span className="font-sans text-sm" style={{ color: 'hsl(40,15%,70%)' }}>
+                  <span className="font-sans text-sm" style={{ color: 'hsl(var(--muted-foreground))' }}>
                     {item}
                   </span>
                 </div>
@@ -116,8 +116,8 @@ export default function About() {
       {/* Stats */}
       <section
         style={{
-          backgroundColor: 'hsl(220,40%,10%)',
-          borderTop: '1px solid hsl(220,30%,20%)',
+          backgroundColor: 'hsl(var(--background))',
+          borderTop: '1px solid hsl(var(--secondary))',
         }}
         className="py-16"
       >
@@ -132,13 +132,13 @@ export default function About() {
               <div key={label} className="iron-stat">
                 <div
                   className="iron-display text-4xl"
-                  style={{ color: 'hsl(38,85%,55%)' }}
+                  style={{ color: 'hsl(var(--accent))' }}
                 >
                   {stat}
                 </div>
                 <div
                   className="font-sans text-xs uppercase tracking-widest mt-2"
-                  style={{ color: 'hsl(40,15%,55%)' }}
+                  style={{ color: 'hsl(var(--muted-foreground))' }}
                 >
                   {label}
                 </div>
@@ -168,7 +168,7 @@ export default function About() {
             className="iron-display mb-6"
             style={{
               fontSize: 'clamp(2rem, 1rem + 3vw, 3rem)',
-              color: 'hsl(40,30%,92%)',
+              color: 'hsl(var(--foreground))',
             }}
           >
             READY TO START?
@@ -181,7 +181,7 @@ export default function About() {
             <Link
               to="/contact"
               className="iron-btn iron-btn--ghost"
-              style={{ color: 'hsl(40,30%,92%)', borderColor: 'rgba(240,235,220,0.4)' }}
+              style={{ color: 'hsl(var(--foreground))', borderColor: 'rgba(240,235,220,0.4)' }}
             >
               Free Estimate
               <ArrowRight size={14} />

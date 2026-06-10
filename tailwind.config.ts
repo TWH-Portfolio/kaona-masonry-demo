@@ -14,17 +14,17 @@ const config: Config = {
       },
       colors: {
         steel: {
-          deep: 'hsl(220 45% 7%)',
-          mid: 'hsl(220 40% 10%)',
-          light: 'hsl(220 35% 14%)',
+          deep: 'hsl(var(--background))',
+          mid: 'hsl(var(--card))',
+          light: 'hsl(var(--secondary))',
         },
         brass: {
-          DEFAULT: 'hsl(38 85% 55%)',
-          dim: 'hsl(38 60% 40%)',
+          DEFAULT: 'hsl(var(--accent))',
+          dim: 'hsl(var(--accent) / 0.6)',
         },
-        bone: 'hsl(40 30% 92%)',
-        rust: 'hsl(15 70% 50%)',
-        concrete: 'hsl(40 8% 75%)',
+        bone: 'hsl(var(--foreground))',
+        rust: 'hsl(var(--accent))',
+        concrete: 'hsl(var(--muted-foreground))',
       },
       borderRadius: {
         DEFAULT: '0px',

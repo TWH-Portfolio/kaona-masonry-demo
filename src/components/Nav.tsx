@@ -16,7 +16,7 @@ export default function Nav() {
 
   return (
     <header
-      style={{ backgroundColor: 'hsl(220,45%,7%)', borderBottom: '1px solid hsl(220,30%,20%)' }}
+      style={{ backgroundColor: 'hsl(var(--background))', borderBottom: '1px solid hsl(var(--secondary))' }}
       className="sticky top-0 z-50"
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
@@ -24,13 +24,13 @@ export default function Nav() {
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <span
             className="iron-display text-xl"
-            style={{ color: 'hsl(38,85%,55%)', letterSpacing: '0.04em' }}
+            style={{ color: 'hsl(var(--accent))', letterSpacing: '0.04em' }}
           >
             KAONA
           </span>
           <span
             className="font-sans text-xs font-medium uppercase tracking-widest hidden sm:block"
-            style={{ color: 'hsl(40,15%,65%)' }}
+            style={{ color: 'hsl(var(--muted-foreground))' }}
           >
             Masonry Inc
           </span>
@@ -46,8 +46,8 @@ export default function Nav() {
               style={{
                 color:
                   location.pathname === link.href
-                    ? 'hsl(38,85%,55%)'
-                    : 'hsl(40,15%,65%)',
+                    ? 'hsl(var(--accent))'
+                    : 'hsl(var(--muted-foreground))',
               }}
             >
               {link.label}
@@ -60,9 +60,9 @@ export default function Nav() {
           <a
             href="tel:+18085721466"
             className="flex items-center gap-2 font-sans text-sm font-semibold"
-            style={{ color: 'hsl(40,30%,92%)' }}
+            style={{ color: 'hsl(var(--foreground))' }}
           >
-            <Phone size={14} style={{ color: 'hsl(38,85%,55%)' }} />
+            <Phone size={14} style={{ color: 'hsl(var(--accent))' }} />
             (808) 572-1466
           </a>
           <Link to="/contact" className="iron-btn" style={{ padding: '0.6rem 1.25rem' }}>
@@ -75,7 +75,7 @@ export default function Nav() {
           className="md:hidden p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
-          style={{ color: 'hsl(40,30%,92%)' }}
+          style={{ color: 'hsl(var(--foreground))' }}
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -86,8 +86,8 @@ export default function Nav() {
         <div
           className="md:hidden border-t px-6 pb-6 pt-4 flex flex-col gap-4"
           style={{
-            backgroundColor: 'hsl(220,40%,10%)',
-            borderColor: 'hsl(220,30%,20%)',
+            backgroundColor: 'hsl(var(--background))',
+            borderColor: 'hsl(var(--secondary))',
           }}
         >
           {NAV_LINKS.map((link) => (
@@ -99,8 +99,8 @@ export default function Nav() {
               style={{
                 color:
                   location.pathname === link.href
-                    ? 'hsl(38,85%,55%)'
-                    : 'hsl(40,30%,92%)',
+                    ? 'hsl(var(--accent))'
+                    : 'hsl(var(--foreground))',
               }}
             >
               {link.label}

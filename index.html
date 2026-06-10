@@ -3,22 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kaona Masonry Inc — Concrete Contractor, Makawao Maui</title>
+    <title>Kaona Masonry Inc | Concrete Contractor, Makawao Maui</title>
     <meta name="description" content="Kaona Masonry Inc. Foundations, driveways, retaining walls, and decorative concrete for Maui's upcountry and valley communities. Licensed. Insured. (808) 572-1466." />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Google Fonts — preload critical weights, no @import -->
+    <!-- Google Search Console verification, replace placeholder with real token at deploy -->
+    <meta name="google-site-verification" content="__SEARCH_CONSOLE_TOKEN__" />
+
+    <!-- Theme color (mobile address bar), matches forest palette -->
+    <meta name="theme-color" content="#142420" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kaona Masonry Inc" />
+    <meta property="og:title" content="Kaona Masonry Inc | Concrete Contractor, Makawao Maui" />
+    <meta property="og:description" content="Maui upcountry concrete contractor. Foundations, driveways, retaining walls, decorative concrete." />
+    <meta property="og:url" content="https://kaona-masonry-demo.thewateringhole.com" />
+    <meta property="og:image" content="https://kaona-masonry-demo.thewateringhole.com/og-image.jpg" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kaona Masonry Inc | Makawao Maui" />
+    <meta name="twitter:description" content="Maui upcountry concrete contractor. Heritage craft, modern code." />
+    <meta name="twitter:image" content="https://kaona-masonry-demo.thewateringhole.com/og-image.jpg" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Google Fonts (dark-luxury style: Playfair Display + Inter + Cormorant) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Archivo:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Archivo:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
 
@@ -28,6 +47,18 @@
       as="image"
       href="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80&fit=crop&auto=format"
     />
+
+    <!-- JSON-LD: Organization (brand-mention SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kaona Masonry Inc",
+      "url": "https://kaona-masonry-demo.thewateringhole.com",
+      "logo": "https://kaona-masonry-demo.thewateringhole.com/favicon.svg",
+      "sameAs": []
+    }
+    </script>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -50,7 +81,7 @@
         "latitude": 20.8578,
         "longitude": -156.3083
       },
-      "url": "https://kaona-masonry-demo.pages.dev",
+      "url": "https://kaona-masonry-demo.thewateringhole.com",
       "areaServed": [
         "Makawao", "Pukalani", "Kula", "Paia", "Haiku", "Kahului",
         "Wailuku", "Kihei", "Wailea", "Lahaina", "Maui"
@@ -68,16 +99,14 @@
     }
     </script>
 
-    <!-- GA4 — swap G-XXXXXXXXXX after client signs -->
-    <!--
+    <!-- GA4 placeholder, replace G-XXXXXXXXXX with real Measurement ID at deploy -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-XXXXXXXXXX', { 'anonymize_ip': true });
     </script>
-    -->
   </head>
   <body>
     <div id="root"></div>

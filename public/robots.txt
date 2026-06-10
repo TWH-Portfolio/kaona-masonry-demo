@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kaona-masonry-demo.thewateringhole.com/sitemap.xml

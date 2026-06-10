@@ -1,7 +1,9 @@
 /* =====================================================================
-   KAONA MASONRY INC — Iron Edge × Iron-Brass
-   Style: industrial | Palette: iron-brass
-   Deep steel navy + bone + brass accent. Zero radius. Oswald display.
+   KAONA MASONRY INC — Dark Luxury × Forest
+   Style: dark-luxury (Playfair Display serif, long motion, hairline rules)
+   Palette: forest (deep forest green bg, warm bone text, soft gold accent)
+   Swapped 2026-04-26 from industrial × iron-brass to diversify cohort.
+   Token names retained so existing components don't break.
 ===================================================================== */
 
 @tailwind base;
@@ -9,37 +11,37 @@
 @tailwind utilities;
 
 :root {
-  /* Core surfaces */
-  --background: 220 45% 7%;
-  --foreground: 40 30% 92%;
-  --card: 220 40% 10%;
-  --card-foreground: 40 30% 92%;
-  --popover: 220 40% 10%;
-  --popover-foreground: 40 30% 92%;
+  /* Core surfaces — deep forest */
+  --background: 150 22% 10%;
+  --foreground: 60 30% 92%;
+  --card: 150 18% 13%;
+  --card-foreground: 60 30% 92%;
+  --popover: 150 18% 13%;
+  --popover-foreground: 60 30% 92%;
 
-  /* Brass accent */
-  --primary: 38 85% 55%;
-  --primary-foreground: 220 45% 7%;
-  --secondary: 220 35% 14%;
-  --secondary-foreground: 40 30% 92%;
-  --muted: 220 35% 14%;
-  --muted-foreground: 40 15% 65%;
-  --accent: 38 85% 55%;
-  --accent-foreground: 220 45% 7%;
-  --destructive: 0 70% 55%;
-  --destructive-foreground: 40 30% 92%;
-  --border: 220 30% 20%;
-  --input: 220 30% 20%;
-  --ring: 38 85% 55%;
+  /* Warm gold accent */
+  --primary: 40 42% 58%;
+  --primary-foreground: 150 22% 10%;
+  --secondary: 150 15% 16%;
+  --secondary-foreground: 60 30% 92%;
+  --muted: 150 15% 16%;
+  --muted-foreground: 45 10% 55%;
+  --accent: 40 42% 58%;
+  --accent-foreground: 150 22% 10%;
+  --destructive: 0 65% 55%;
+  --destructive-foreground: 60 30% 92%;
+  --border: 40 42% 58% / 0.18;
+  --input: 150 15% 18%;
+  --ring: 40 42% 58%;
 
-  /* Extended palette */
-  --steel-deep: 220 45% 7%;
-  --steel-mid: 220 40% 10%;
-  --steel-light: 220 35% 14%;
-  --brass: 38 85% 55%;
-  --brass-dim: 38 60% 40%;
-  --rust: 15 70% 50%;
-  --concrete: 40 8% 75%;
+  /* Legacy "Iron Edge" tokens — repointed to forest values */
+  --steel-deep: 150 22% 10%;
+  --steel-mid: 150 18% 13%;
+  --steel-light: 150 15% 16%;
+  --brass: 40 42% 58%;        /* now warm forest gold */
+  --brass-dim: 40 38% 45%;
+  --rust: 30 30% 38%;
+  --concrete: 60 12% 75%;
 
   /* Zero radius — hard edge by design */
   --radius: 0rem;
@@ -69,19 +71,19 @@
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  font-family: 'Archivo', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-/* Display type */
+/* Display type — dark-luxury serif */
 .iron-display {
-  font-family: 'Oswald', 'Impact', sans-serif;
+  font-family: 'Playfair Display', 'Georgia', serif;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
-  line-height: 0.88;
+  text-transform: none;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
   color: hsl(var(--foreground));
 }
 

@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import { Phone, ArrowRight, CheckCircle } from 'lucide-react'
 
 // Confirmed working Unsplash IDs from niche guide
-const HERO_PHOTO = 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80&fit=crop&auto=format'
-const ABOUT_PHOTO = 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=900&q=80&fit=crop&auto=format'
-const CTA_PHOTO   = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80&fit=crop&auto=format'
+const HERO_PHOTO = 'https://images.unsplash.com/photo-1664462516775-95f0b70c96da?w=1200&q=80&fit=crop&auto=format'
+const ABOUT_PHOTO = 'https://images.unsplash.com/photo-1608947273783-c5d1ff5771ca?w=900&q=80&fit=crop&auto=format'
+const CTA_PHOTO   = 'https://images.unsplash.com/photo-1690541828600-a50a853a4a25?w=1400&q=80&fit=crop&auto=format'
 
 const SERVICES = [
   {
@@ -90,17 +90,17 @@ const SERVICE_TOWNS = [
 export default function Home() {
   return (
     <main>
-      {/* HERO — split layout, md:grid-cols-2, real photo right */}
+      {/* HERO, split layout, md:grid-cols-2, real photo right */}
       <section
         id="hero"
         className="min-h-[92vh] flex items-center"
-        style={{ backgroundColor: 'hsl(220,45%,7%)' }}
+        style={{ backgroundColor: 'hsl(var(--background))' }}
       >
         <div className="max-w-7xl mx-auto px-6 py-20 w-full">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Left — copy */}
+            {/* Left, copy */}
             <div className="animate-fade-up">
-              <div className="iron-label mb-5">§ Concrete Contractor · Makawao, Maui</div>
+              <div className="iron-label mb-5">Concrete Contractor · Makawao, Maui</div>
 
               <h1
                 className="iron-display mb-6"
@@ -108,17 +108,17 @@ export default function Home() {
               >
                 POURED ON
                 <br />
-                <span style={{ color: 'hsl(38,85%,55%)' }}>MAUI SOIL.</span>
+                <span style={{ color: 'hsl(var(--accent))' }}>MAUI SOIL.</span>
                 <br />
                 BUILT TO LAST.
               </h1>
 
               <p
                 className="font-body text-lg leading-relaxed mb-8 max-w-lg"
-                style={{ color: 'hsl(40,15%,70%)' }}
+                style={{ color: 'hsl(var(--muted-foreground))' }}
               >
                 Foundations, driveways, retaining walls, and masonry for upcountry
-                and valley Maui. 17 years on this island. Soil profile checked
+                and valley Maui. 16 years on this island. Soil profile checked
                 before every pour.
               </p>
 
@@ -136,37 +136,37 @@ export default function Home() {
               {/* Stats strip */}
               <div
                 className="flex flex-wrap gap-8 pt-8"
-                style={{ borderTop: '1px solid hsl(220,30%,20%)' }}
+                style={{ borderTop: '1px solid hsl(var(--secondary))' }}
               >
                 <div className="iron-stat">
-                  <div className="iron-display text-3xl" style={{ color: 'hsl(38,85%,55%)' }}>483</div>
-                  <div className="font-sans text-xs uppercase tracking-widest mt-1" style={{ color: 'hsl(40,15%,55%)' }}>
+                  <div className="iron-display text-3xl" style={{ color: 'hsl(var(--accent))' }}>483</div>
+                  <div className="font-sans text-xs uppercase tracking-widest mt-1" style={{ color: 'hsl(var(--muted-foreground))' }}>
                     Projects Poured
                   </div>
                 </div>
                 <div className="iron-stat">
-                  <div className="iron-display text-3xl" style={{ color: 'hsl(38,85%,55%)' }}>17</div>
-                  <div className="font-sans text-xs uppercase tracking-widest mt-1" style={{ color: 'hsl(40,15%,55%)' }}>
+                  <div className="iron-display text-3xl" style={{ color: 'hsl(var(--accent))' }}>16</div>
+                  <div className="font-sans text-xs uppercase tracking-widest mt-1" style={{ color: 'hsl(var(--muted-foreground))' }}>
                     Years on Maui
                   </div>
                 </div>
                 <div className="iron-stat">
-                  <div className="iron-display text-3xl" style={{ color: 'hsl(38,85%,55%)' }}>0</div>
-                  <div className="font-sans text-xs uppercase tracking-widest mt-1" style={{ color: 'hsl(40,15%,55%)' }}>
+                  <div className="iron-display text-3xl" style={{ color: 'hsl(var(--accent))' }}>0</div>
+                  <div className="font-sans text-xs uppercase tracking-widest mt-1" style={{ color: 'hsl(var(--muted-foreground))' }}>
                     Failed Inspections
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right — photo with trust badge */}
+            {/* Right, photo with trust badge */}
             <div className="hidden md:block relative animate-fade-up-delay-1">
               {/* Brass corner frame (top-right) */}
               <div
                 className="absolute -top-3 -right-3 w-12 h-12 z-10 pointer-events-none"
                 style={{
-                  borderTop: '3px solid hsl(38,85%,55%)',
-                  borderRight: '3px solid hsl(38,85%,55%)',
+                  borderTop: '3px solid hsl(var(--accent))',
+                  borderRight: '3px solid hsl(var(--accent))',
                 }}
               />
 
@@ -182,16 +182,16 @@ export default function Home() {
                 />
               </div>
 
-              {/* Floating trust badge — bottom-left */}
+              {/* Floating trust badge, bottom-left */}
               <div
                 className="absolute -bottom-5 -left-5 z-10 p-4"
                 style={{
-                  backgroundColor: 'hsl(38,85%,55%)',
-                  color: 'hsl(220,45%,7%)',
+                  backgroundColor: 'hsl(var(--accent))',
+                  color: 'hsl(var(--background))',
                   minWidth: '160px',
                 }}
               >
-                <div className="iron-display text-2xl" style={{ color: 'hsl(220,45%,7%)' }}>
+                <div className="iron-display text-2xl" style={{ color: 'hsl(var(--background))' }}>
                   5.0
                 </div>
                 <div className="font-sans text-xs font-semibold uppercase tracking-wider mt-0.5">
@@ -207,9 +207,9 @@ export default function Home() {
       {/* AFFILIATIONS STRIP */}
       <section
         style={{
-          backgroundColor: 'hsl(220,40%,10%)',
-          borderTop: '1px solid hsl(220,30%,20%)',
-          borderBottom: '1px solid hsl(220,30%,20%)',
+          backgroundColor: 'hsl(var(--background))',
+          borderTop: '1px solid hsl(var(--secondary))',
+          borderBottom: '1px solid hsl(var(--secondary))',
         }}
         className="py-5"
       >
@@ -225,11 +225,11 @@ export default function Home() {
               <div key={badge} className="flex items-center gap-2">
                 <div
                   className="w-2 h-2 shrink-0"
-                  style={{ backgroundColor: 'hsl(38,85%,55%)' }}
+                  style={{ backgroundColor: 'hsl(var(--accent))' }}
                 />
                 <span
                   className="font-sans text-xs font-medium uppercase tracking-widest"
-                  style={{ color: 'hsl(40,15%,70%)' }}
+                  style={{ color: 'hsl(var(--muted-foreground))' }}
                 >
                   {badge}
                 </span>
@@ -240,22 +240,22 @@ export default function Home() {
       </section>
 
       {/* PHILOSOPHY SECTION */}
-      <section className="py-20" style={{ backgroundColor: 'hsl(220,45%,7%)' }}>
+      <section className="py-20" style={{ backgroundColor: 'hsl(var(--background))' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="iron-label mb-4">§ How We Think</div>
+              <div className="iron-label mb-4">How We Think</div>
               <h2
                 className="iron-display mb-6"
                 style={{ fontSize: 'clamp(2rem, 1rem + 4vw, 4rem)' }}
               >
                 KNOW THE SOIL
                 <br />
-                <span style={{ color: 'hsl(38,85%,55%)' }}>BEFORE YOU POUR.</span>
+                <span style={{ color: 'hsl(var(--accent))' }}>BEFORE YOU POUR.</span>
               </h2>
               <p
                 className="font-body leading-relaxed mb-8"
-                style={{ color: 'hsl(40,15%,70%)' }}
+                style={{ color: 'hsl(var(--muted-foreground))' }}
               >
                 Upcountry Maui is not the same as valley Maui. Makawao's volcanic clay
                 drains differently than Kihei's sandy base. Kula's elevation affects
@@ -264,7 +264,7 @@ export default function Home() {
               </p>
               <p
                 className="font-body leading-relaxed"
-                style={{ color: 'hsl(40,15%,70%)' }}
+                style={{ color: 'hsl(var(--muted-foreground))' }}
               >
                 Every Kaona Masonry estimate starts with a site walk. We look at slope,
                 soil, drainage, and existing structure before we write a number. That's
@@ -282,11 +282,11 @@ export default function Home() {
                   >
                     <div
                       className="iron-display text-lg mb-1"
-                      style={{ color: 'hsl(38,85%,55%)' }}
+                      style={{ color: 'hsl(var(--accent))' }}
                     >
                       {item.label}
                     </div>
-                    <p className="font-sans text-sm" style={{ color: 'hsl(40,15%,65%)' }}>
+                    <p className="font-sans text-sm" style={{ color: 'hsl(var(--muted-foreground))' }}>
                       {item.detail}
                     </p>
                   </div>
@@ -297,11 +297,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PROCESS STRIP — 4 steps */}
+      {/* PROCESS STRIP, 4 steps */}
       <section
         style={{
-          backgroundColor: 'hsl(220,40%,10%)',
-          borderTop: '1px solid hsl(220,30%,20%)',
+          backgroundColor: 'hsl(var(--background))',
+          borderTop: '1px solid hsl(var(--secondary))',
         }}
         className="py-20"
       >
@@ -313,7 +313,7 @@ export default function Home() {
           >
             ONE CREW.
             <br />
-            <span style={{ color: 'hsl(38,85%,55%)' }}>EVERY STEP.</span>
+            <span style={{ color: 'hsl(var(--accent))' }}>EVERY STEP.</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -321,23 +321,23 @@ export default function Home() {
               <div key={step.num} className="iron-card--brass-top relative">
                 <div
                   className="iron-display text-6xl absolute top-4 right-4 select-none"
-                  style={{ color: 'hsl(38,85%,15%)' }}
+                  style={{ color: 'hsl(var(--accent) / 0.3)' }}
                 >
                   {step.num}
                 </div>
                 <div
                   className="iron-display text-xl mb-3 relative z-10"
-                  style={{ color: 'hsl(38,85%,55%)' }}
+                  style={{ color: 'hsl(var(--accent))' }}
                 >
                   {step.num}
                 </div>
                 <div
                   className="iron-display text-lg mb-2"
-                  style={{ color: 'hsl(40,30%,92%)' }}
+                  style={{ color: 'hsl(var(--foreground))' }}
                 >
                   {step.title}
                 </div>
-                <p className="font-sans text-sm" style={{ color: 'hsl(40,15%,65%)' }}>
+                <p className="font-sans text-sm" style={{ color: 'hsl(var(--muted-foreground))' }}>
                   {step.detail}
                 </p>
               </div>
@@ -346,8 +346,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SERVICES — 7 services, staggered bento */}
-      <section id="services" className="py-20" style={{ backgroundColor: 'hsl(220,45%,7%)' }}>
+      {/* SERVICES, 7 services, staggered bento */}
+      <section id="services" className="py-20" style={{ backgroundColor: 'hsl(var(--background))' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="iron-label mb-4">What We Do</div>
           <h2
@@ -356,29 +356,29 @@ export default function Home() {
           >
             483 POURS.
             <br />
-            <span style={{ color: 'hsl(38,85%,55%)' }}>ZERO CALLBACKS.</span>
+            <span style={{ color: 'hsl(var(--accent))' }}>ZERO CALLBACKS.</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ backgroundColor: 'hsl(220,30%,20%)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ backgroundColor: 'hsl(var(--secondary))' }}>
             {SERVICES.map((svc) => (
               <div
                 key={svc.name}
                 className="iron-service-card"
-                style={{ backgroundColor: 'hsl(220,40%,10%)' }}
+                style={{ backgroundColor: 'hsl(var(--background))' }}
               >
                 <div
                   className="iron-display text-lg mb-1"
-                  style={{ color: 'hsl(40,30%,92%)' }}
+                  style={{ color: 'hsl(var(--foreground))' }}
                 >
                   {svc.name}
                 </div>
                 <div
                   className="font-sans text-xs uppercase tracking-widest mb-3"
-                  style={{ color: 'hsl(38,85%,55%)' }}
+                  style={{ color: 'hsl(var(--accent))' }}
                 >
                   Ideal for: {svc.ideal}
                 </div>
-                <p className="font-sans text-sm leading-relaxed" style={{ color: 'hsl(40,15%,65%)' }}>
+                <p className="font-sans text-sm leading-relaxed" style={{ color: 'hsl(var(--muted-foreground))' }}>
                   {svc.desc}
                 </p>
               </div>
@@ -394,11 +394,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* RECENT WORK — named projects with metrics */}
+      {/* RECENT WORK, named projects with metrics */}
       <section
         style={{
-          backgroundColor: 'hsl(220,40%,10%)',
-          borderTop: '1px solid hsl(220,30%,20%)',
+          backgroundColor: 'hsl(var(--background))',
+          borderTop: '1px solid hsl(var(--secondary))',
         }}
         className="py-20"
       >
@@ -410,7 +410,7 @@ export default function Home() {
           >
             YOUR PROJECT.
             <br />
-            <span style={{ color: 'hsl(38,85%,55%)' }}>OUR POUR.</span>
+            <span style={{ color: 'hsl(var(--accent))' }}>OUR POUR.</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -418,21 +418,21 @@ export default function Home() {
               <div
                 key={project.name}
                 className="iron-card"
-                style={{ borderTop: '3px solid hsl(38,85%,55%)' }}
+                style={{ borderTop: '3px solid hsl(var(--accent))' }}
               >
                 <div
                   className="iron-display text-lg mb-1"
-                  style={{ color: 'hsl(40,30%,92%)' }}
+                  style={{ color: 'hsl(var(--foreground))' }}
                 >
                   {project.name}
                 </div>
                 <div
                   className="font-sans text-xs uppercase tracking-widest mb-3"
-                  style={{ color: 'hsl(38,85%,55%)' }}
+                  style={{ color: 'hsl(var(--accent))' }}
                 >
                   {project.town}, Maui
                 </div>
-                <p className="font-sans text-sm" style={{ color: 'hsl(40,15%,65%)' }}>
+                <p className="font-sans text-sm" style={{ color: 'hsl(var(--muted-foreground))' }}>
                   {project.scope}
                 </p>
               </div>
@@ -448,8 +448,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIALS — 3 cards, dated, named */}
-      <section id="reviews" className="py-20" style={{ backgroundColor: 'hsl(220,45%,7%)' }}>
+      {/* TESTIMONIALS, 3 cards, dated, named */}
+      <section id="reviews" className="py-20" style={{ backgroundColor: 'hsl(var(--background))' }}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="iron-label mb-4">Client Reviews</div>
           <h2
@@ -458,7 +458,7 @@ export default function Home() {
           >
             5.0 FROM 31 REVIEWS.
             <br />
-            <span style={{ color: 'hsl(38,85%,55%)' }}>ON GOOGLE.</span>
+            <span style={{ color: 'hsl(var(--accent))' }}>ON GOOGLE.</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -466,30 +466,30 @@ export default function Home() {
               <div
                 key={t.name}
                 className="iron-card"
-                style={{ borderLeft: '3px solid hsl(38,85%,55%)' }}
+                style={{ borderLeft: '3px solid hsl(var(--accent))' }}
               >
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <span key={i} style={{ color: 'hsl(38,85%,55%)', fontSize: '1rem' }}>
+                    <span key={i} style={{ color: 'hsl(var(--accent))', fontSize: '1rem' }}>
                       &#9733;
                     </span>
                   ))}
                 </div>
                 <blockquote
                   className="font-body text-sm leading-relaxed mb-4"
-                  style={{ color: 'hsl(40,15%,75%)' }}
+                  style={{ color: 'hsl(var(--muted-foreground))' }}
                 >
                   "{t.quote}"
                 </blockquote>
                 <cite
                   className="font-sans text-xs not-italic font-semibold"
-                  style={{ color: 'hsl(38,85%,55%)' }}
+                  style={{ color: 'hsl(var(--accent))' }}
                 >
                   {t.name}
                 </cite>
                 <div
                   className="font-sans text-xs mt-0.5"
-                  style={{ color: 'hsl(40,15%,50%)' }}
+                  style={{ color: 'hsl(var(--muted-foreground))' }}
                 >
                   {t.detail}
                 </div>
@@ -499,11 +499,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ABOUT TEASER — with photo */}
+      {/* ABOUT TEASER, with photo */}
       <section
         style={{
-          backgroundColor: 'hsl(220,40%,10%)',
-          borderTop: '1px solid hsl(220,30%,20%)',
+          backgroundColor: 'hsl(var(--background))',
+          borderTop: '1px solid hsl(var(--secondary))',
         }}
         className="py-20"
       >
@@ -527,15 +527,15 @@ export default function Home() {
             >
               POURING MAUI CONCRETE
               <br />
-              <span style={{ color: 'hsl(38,85%,55%)' }}>SINCE 2009.</span>
+              <span style={{ color: 'hsl(var(--accent))' }}>SINCE 2009.</span>
             </h2>
             <p
               className="font-body leading-relaxed mb-6"
-              style={{ color: 'hsl(40,15%,70%)' }}
+              style={{ color: 'hsl(var(--muted-foreground))' }}
             >
               Kaona Masonry started in Makawao with residential work and grew through
               referrals. No advertising. Word moves fast among Maui's general contractors
-              when a sub delivers clean work on schedule. Seventeen years later, the
+              when a sub delivers clean work on schedule. Sixteen years later, the
               crew is still small and the standard is still the same.
             </p>
             <div className="flex flex-col gap-3 mb-8">
@@ -546,8 +546,8 @@ export default function Home() {
                 'Upcountry specialists since 2009',
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
-                  <CheckCircle size={16} style={{ color: 'hsl(38,85%,55%)', flexShrink: 0 }} />
-                  <span className="font-sans text-sm" style={{ color: 'hsl(40,15%,70%)' }}>
+                  <CheckCircle size={16} style={{ color: 'hsl(var(--accent))', flexShrink: 0 }} />
+                  <span className="font-sans text-sm" style={{ color: 'hsl(var(--muted-foreground))' }}>
                     {item}
                   </span>
                 </div>
@@ -564,8 +564,8 @@ export default function Home() {
       {/* SERVICE TOWNS STRIP */}
       <section
         style={{
-          backgroundColor: 'hsl(220,45%,7%)',
-          borderTop: '1px solid hsl(220,30%,20%)',
+          backgroundColor: 'hsl(var(--background))',
+          borderTop: '1px solid hsl(var(--secondary))',
         }}
         className="py-12"
       >
@@ -577,8 +577,8 @@ export default function Home() {
                 key={town}
                 className="font-sans text-xs font-medium uppercase tracking-widest px-3 py-1.5"
                 style={{
-                  border: '1px solid hsl(220,30%,20%)',
-                  color: 'hsl(40,15%,60%)',
+                  border: '1px solid hsl(var(--secondary))',
+                  color: 'hsl(var(--muted-foreground))',
                 }}
               >
                 {town}
@@ -587,7 +587,7 @@ export default function Home() {
           </div>
           <p
             className="font-sans text-xs mt-4"
-            style={{ color: 'hsl(40,15%,45%)' }}
+            style={{ color: 'hsl(var(--muted-foreground))' }}
           >
             Maui County · Free estimates for all service areas
           </p>
@@ -615,7 +615,7 @@ export default function Home() {
             className="iron-display mb-4"
             style={{
               fontSize: 'clamp(2rem, 1rem + 4vw, 3.5rem)',
-              color: 'hsl(40,30%,92%)',
+              color: 'hsl(var(--foreground))',
               maxWidth: '700px',
             }}
           >
@@ -623,7 +623,7 @@ export default function Home() {
             <br />
             YOUR TIMELINE.
             <br />
-            <span style={{ color: 'hsl(38,85%,55%)' }}>ONE CALL.</span>
+            <span style={{ color: 'hsl(var(--accent))' }}>ONE CALL.</span>
           </h2>
           <p
             className="font-sans text-sm mb-8"
@@ -637,7 +637,7 @@ export default function Home() {
               <Phone size={15} />
               (808) 572-1466
             </a>
-            <Link to="/contact" className="iron-btn iron-btn--ghost" style={{ color: 'hsl(40,30%,92%)', borderColor: 'rgba(240,235,220,0.4)' }}>
+            <Link to="/contact" className="iron-btn iron-btn--ghost" style={{ color: 'hsl(var(--foreground))', borderColor: 'rgba(240,235,220,0.4)' }}>
               Request Estimate
               <ArrowRight size={14} />
             </Link>

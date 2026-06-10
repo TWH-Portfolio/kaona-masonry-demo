@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: 'hsl(220,45%,5%)',
-        borderTop: '1px solid hsl(220,30%,20%)',
+        backgroundColor: 'hsl(var(--background))',
+        borderTop: '1px solid hsl(var(--secondary))',
       }}
       className="pt-16 pb-8"
     >
@@ -14,16 +14,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <div className="iron-display text-2xl mb-1" style={{ color: 'hsl(38,85%,55%)' }}>
+            <div className="iron-display text-2xl mb-1" style={{ color: 'hsl(var(--accent))' }}>
               KAONA MASONRY INC
             </div>
             <p
               className="font-sans text-xs uppercase tracking-widest mb-4"
-              style={{ color: 'hsl(40,15%,55%)' }}
+              style={{ color: 'hsl(var(--muted-foreground))' }}
             >
               Concrete Contractor · Makawao, Maui
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: 'hsl(40,15%,65%)' }}>
+            <p className="text-sm leading-relaxed" style={{ color: 'hsl(var(--muted-foreground))' }}>
               Foundations, driveways, retaining walls, and decorative concrete
               for Maui's upcountry and valley communities. Every pour planned,
               every finish earned.
@@ -45,7 +45,7 @@ export default function Footer() {
                   <Link
                     to={link.href}
                     className="font-sans text-sm transition-colors hover:text-white"
-                    style={{ color: 'hsl(40,15%,65%)' }}
+                    style={{ color: 'hsl(var(--muted-foreground))' }}
                   >
                     {link.label}
                   </Link>
@@ -62,9 +62,9 @@ export default function Footer() {
                 <a
                   href="tel:+18085721466"
                   className="flex items-start gap-3 font-sans text-sm transition-colors hover:text-white"
-                  style={{ color: 'hsl(40,15%,65%)' }}
+                  style={{ color: 'hsl(var(--muted-foreground))' }}
                 >
-                  <Phone size={14} className="mt-0.5 shrink-0" style={{ color: 'hsl(38,85%,55%)' }} />
+                  <Phone size={14} className="mt-0.5 shrink-0" style={{ color: 'hsl(var(--accent))' }} />
                   (808) 572-1466
                 </a>
               </li>
@@ -72,9 +72,9 @@ export default function Footer() {
                 <a
                   href="mailto:info@kaonamasonry.com"
                   className="flex items-start gap-3 font-sans text-sm transition-colors hover:text-white"
-                  style={{ color: 'hsl(40,15%,65%)' }}
+                  style={{ color: 'hsl(var(--muted-foreground))' }}
                 >
-                  <Mail size={14} className="mt-0.5 shrink-0" style={{ color: 'hsl(38,85%,55%)' }} />
+                  <Mail size={14} className="mt-0.5 shrink-0" style={{ color: 'hsl(var(--accent))' }} />
                   info@kaonamasonry.com
                 </a>
               </li>
@@ -84,9 +84,9 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 font-sans text-sm transition-colors hover:text-white"
-                  style={{ color: 'hsl(40,15%,65%)' }}
+                  style={{ color: 'hsl(var(--muted-foreground))' }}
                 >
-                  <MapPin size={14} className="mt-0.5 shrink-0" style={{ color: 'hsl(38,85%,55%)' }} />
+                  <MapPin size={14} className="mt-0.5 shrink-0" style={{ color: 'hsl(var(--accent))' }} />
                   24 Pau Hana Rd<br />Makawao, HI 96768
                 </a>
               </li>
@@ -97,12 +97,12 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           className="pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-3"
-          style={{ borderTop: '1px solid hsl(220,30%,20%)' }}
+          style={{ borderTop: '1px solid hsl(var(--secondary))' }}
         >
-          <p className="font-sans text-xs" style={{ color: 'hsl(40,15%,45%)' }}>
+          <p className="font-sans text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>
             &copy; {new Date().getFullYear()} Kaona Masonry Inc. All rights reserved.
           </p>
-          <p className="font-sans text-xs" style={{ color: 'hsl(40,15%,45%)' }}>
+          <p className="font-sans text-xs" style={{ color: 'hsl(var(--muted-foreground))' }}>
             Licensed Hawaii Contractor &middot; Insured &middot; Serving Maui
           </p>
         </div>
